@@ -550,6 +550,19 @@ bool srv_stats_auto_recalc = TRUE;
 
 ulong srv_replication_delay = 0;
 
+/*kyong*/
+//declare and iniyialize table space id
+ulint   srv_ol_space_id = 0;
+ulint   srv_no_space_id = 0;
+ulint   srv_stk_space_id = 0;
+ulint   srv_cust_space_id = 0;
+ulint   srv_or_space_id = 0;
+ulint   srv_dist_space_id = 0;
+ulint   srv_wh_space_id = 0;
+ulint   srv_itm_space_id = 0;
+ulint   srv_his_space_id = 0;
+/* end */
+
 /*-------------------------------------------*/
 ulong srv_n_spin_wait_rounds = 30;
 ulong srv_spin_wait_delay = 6;

@@ -681,6 +681,18 @@ extern bool srv_stats_include_delete_marked;
 
 extern ulong srv_checksum_algorithm;
 
+/*kyong*/
+extern ulint    srv_ol_space_id;
+extern ulint    srv_no_space_id;
+extern ulint    srv_stk_space_id;
+extern ulint    srv_cust_space_id;
+extern ulint    srv_or_space_id;
+extern ulint    srv_dist_space_id;
+extern ulint    srv_wh_space_id;
+extern ulint    srv_itm_space_id;
+extern ulint    srv_his_space_id;
+/**/
+
 extern double srv_max_buf_pool_modified_pct;
 extern ulong srv_max_purge_lag;
 extern ulong srv_max_purge_lag_delay;
