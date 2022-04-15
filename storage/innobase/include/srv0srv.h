@@ -74,6 +74,30 @@ struct srv_stats_t {
   typedef ib_counter_t<lint, 1, single_indexer_t> lint_ctr_1_t;
   typedef ib_counter_t<int64_t, 1, single_indexer_t> int64_ctr_1_t;
 
+  /*kyong*/
+  ulint_ctr_1_t tpcc_warehouse_disk_reads;
+  ulint_ctr_1_t tpcc_district_disk_reads;
+  ulint_ctr_1_t tpcc_customer_disk_reads;
+  ulint_ctr_1_t tpcc_stock_disk_reads;
+  ulint_ctr_1_t tpcc_item_disk_reads;
+  ulint_ctr_1_t tpcc_orders_disk_reads;
+  ulint_ctr_1_t tpcc_new_orders_disk_reads;
+  ulint_ctr_1_t tpcc_order_line_disk_reads;
+  ulint_ctr_1_t tpcc_history_disk_reads;
+
+  ulint_ctr_1_t tpcc_warehouse_buf_reads;
+  ulint_ctr_1_t tpcc_district_buf_reads;
+  ulint_ctr_1_t tpcc_customer_buf_reads;
+  ulint_ctr_1_t tpcc_stock_buf_reads;
+  ulint_ctr_1_t tpcc_item_buf_reads;
+  ulint_ctr_1_t tpcc_orders_buf_reads;
+  ulint_ctr_1_t tpcc_new_orders_buf_reads;
+  ulint_ctr_1_t tpcc_order_line_buf_reads;
+  ulint_ctr_1_t tpcc_history_buf_reads;
+
+  ulint_ctr_1_t tpcc_total_reads;
+  /**/
+
   /** Count the amount of data written in total (in bytes) */
   ulint_ctr_1_t data_written;
 
@@ -1138,6 +1162,30 @@ struct export_var_t {
 #ifdef UNIV_DEBUG
   ulint innodb_buffer_pool_pages_latched;  /*!< Latched pages */
 #endif                                     /* UNIV_DEBUG */
+  /*kyong*/
+  ulint tpcc_warehouse_disk_reads;
+  ulint tpcc_district_disk_reads;
+  ulint tpcc_customer_disk_reads;
+  ulint tpcc_stock_disk_reads;
+  ulint tpcc_item_disk_reads;
+  ulint tpcc_orders_disk_reads;
+  ulint tpcc_new_orders_disk_reads;
+  ulint tpcc_order_line_disk_reads;
+  ulint tpcc_history_disk_reads;
+
+  ulint tpcc_warehouse_buf_reads;
+  ulint tpcc_district_buf_reads;
+  ulint tpcc_customer_buf_reads;
+  ulint tpcc_stock_buf_reads;
+  ulint tpcc_item_buf_reads;
+  ulint tpcc_orders_buf_reads;
+  ulint tpcc_new_orders_buf_reads;
+  ulint tpcc_order_line_buf_reads;
+  ulint tpcc_history_buf_reads;
+
+  ulint tpcc_total_reads;
+  /**/
+
   ulint innodb_buffer_pool_read_requests;  /*!< buf_pool->stat.n_page_gets */
   ulint innodb_buffer_pool_reads;          /*!< srv_buf_pool_reads */
   ulint innodb_buffer_pool_wait_free;      /*!< srv_buf_pool_wait_free */

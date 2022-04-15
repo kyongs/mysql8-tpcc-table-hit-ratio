@@ -1540,6 +1540,30 @@ void srv_export_innodb_status(void) {
 
   mutex_enter(&srv_innodb_monitor_mutex);
 
+  /*kyong*/
+  export_vars.tpcc_customer_disk_reads = srv_stats.tpcc_customer_disk_reads;
+  export_vars.tpcc_district_disk_reads = srv_stats.tpcc_district_disk_reads;
+  export_vars.tpcc_history_disk_reads = srv_stats.tpcc_history_disk_reads;
+  export_vars.tpcc_item_disk_reads = srv_stats.tpcc_item_disk_reads;
+  export_vars.tpcc_new_orders_disk_reads = srv_stats.tpcc_new_orders_disk_reads;
+  export_vars.tpcc_order_line_disk_reads = srv_stats.tpcc_order_line_disk_reads;
+  export_vars.tpcc_orders_disk_reads = srv_stats.tpcc_orders_disk_reads;
+  export_vars.tpcc_stock_disk_reads = srv_stats.tpcc_stock_disk_reads;
+  export_vars.tpcc_warehouse_disk_reads = srv_stats.tpcc_warehouse_disk_reads;
+
+  export_vars.tpcc_customer_buf_reads = srv_stats.tpcc_customer_buf_reads;
+  export_vars.tpcc_district_buf_reads = srv_stats.tpcc_district_buf_reads;
+  export_vars.tpcc_history_buf_reads = srv_stats.tpcc_history_buf_reads;
+  export_vars.tpcc_item_buf_reads = srv_stats.tpcc_item_buf_reads;
+  export_vars.tpcc_new_orders_buf_reads = srv_stats.tpcc_new_orders_buf_reads;
+  export_vars.tpcc_order_line_buf_reads = srv_stats.tpcc_order_line_buf_reads;
+  export_vars.tpcc_orders_buf_reads = srv_stats.tpcc_orders_buf_reads;
+  export_vars.tpcc_stock_buf_reads = srv_stats.tpcc_stock_buf_reads;
+  export_vars.tpcc_warehouse_buf_reads = srv_stats.tpcc_warehouse_buf_reads;
+  
+  export_vars.tpcc_total_reads = srv_stats.tpcc_total_reads;
+  /**/
+
   export_vars.innodb_data_pending_reads = os_n_pending_reads;
 
   export_vars.innodb_data_pending_writes = os_n_pending_writes;
