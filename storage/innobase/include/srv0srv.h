@@ -75,27 +75,27 @@ struct srv_stats_t {
   typedef ib_counter_t<int64_t, 1, single_indexer_t> int64_ctr_1_t;
 
   /*kyong*/
-  ulint_ctr_1_t tpcc_warehouse_disk_reads;
-  ulint_ctr_1_t tpcc_district_disk_reads;
-  ulint_ctr_1_t tpcc_customer_disk_reads;
-  ulint_ctr_1_t tpcc_stock_disk_reads;
-  ulint_ctr_1_t tpcc_item_disk_reads;
-  ulint_ctr_1_t tpcc_orders_disk_reads;
-  ulint_ctr_1_t tpcc_new_orders_disk_reads;
-  ulint_ctr_1_t tpcc_order_line_disk_reads;
-  ulint_ctr_1_t tpcc_history_disk_reads;
+  ulint_ctr_1_t tpcc_wh_disk_rd;
+  ulint_ctr_1_t tpcc_dist_disk_rd;
+  ulint_ctr_1_t tpcc_cust_disk_rd;
+  ulint_ctr_1_t tpcc_stk_disk_rd;
+  ulint_ctr_1_t tpcc_itm_disk_rd;
+  ulint_ctr_1_t tpcc_or_disk_rd;
+  ulint_ctr_1_t tpcc_no_disk_rd;
+  ulint_ctr_1_t tpcc_ol_disk_rd;
+  ulint_ctr_1_t tpcc_his_disk_rd;
 
-  ulint_ctr_1_t tpcc_warehouse_buf_reads;
-  ulint_ctr_1_t tpcc_district_buf_reads;
-  ulint_ctr_1_t tpcc_customer_buf_reads;
-  ulint_ctr_1_t tpcc_stock_buf_reads;
-  ulint_ctr_1_t tpcc_item_buf_reads;
-  ulint_ctr_1_t tpcc_orders_buf_reads;
-  ulint_ctr_1_t tpcc_new_orders_buf_reads;
-  ulint_ctr_1_t tpcc_order_line_buf_reads;
-  ulint_ctr_1_t tpcc_history_buf_reads;
+  ulint_ctr_1_t tpcc_wh_buf_rd;
+  ulint_ctr_1_t tpcc_dist_buf_rd;
+  ulint_ctr_1_t tpcc_cust_buf_rd;
+  ulint_ctr_1_t tpcc_stk_buf_rd;
+  ulint_ctr_1_t tpcc_itm_buf_rd;
+  ulint_ctr_1_t tpcc_or_buf_rd;
+  ulint_ctr_1_t tpcc_no_buf_rd;
+  ulint_ctr_1_t tpcc_ol_buf_rd;
+  ulint_ctr_1_t tpcc_his_buf_rd;
 
-  ulint_ctr_1_t tpcc_total_reads;
+  ulint_ctr_1_t tpcc_total_rd;
   /**/
 
   /** Count the amount of data written in total (in bytes) */
@@ -1163,27 +1163,26 @@ struct export_var_t {
   ulint innodb_buffer_pool_pages_latched;  /*!< Latched pages */
 #endif                                     /* UNIV_DEBUG */
   /*kyong*/
-  ulint tpcc_warehouse_disk_reads;
-  ulint tpcc_district_disk_reads;
-  ulint tpcc_customer_disk_reads;
-  ulint tpcc_stock_disk_reads;
-  ulint tpcc_item_disk_reads;
-  ulint tpcc_orders_disk_reads;
-  ulint tpcc_new_orders_disk_reads;
-  ulint tpcc_order_line_disk_reads;
-  ulint tpcc_history_disk_reads;
+  ulint tpcc_wh_disk_rd;
+  ulint tpcc_dist_disk_rd;
+  ulint tpcc_cust_disk_rd;
+  ulint tpcc_stk_disk_rd;
+  ulint tpcc_itm_disk_rd;
+  ulint tpcc_or_disk_rd;
+  ulint tpcc_no_disk_rd;
+  ulint tpcc_ol_disk_rd;
+  ulint tpcc_his_disk_rd;
 
-  ulint tpcc_warehouse_buf_reads;
-  ulint tpcc_district_buf_reads;
-  ulint tpcc_customer_buf_reads;
-  ulint tpcc_stock_buf_reads;
-  ulint tpcc_item_buf_reads;
-  ulint tpcc_orders_buf_reads;
-  ulint tpcc_new_orders_buf_reads;
-  ulint tpcc_order_line_buf_reads;
-  ulint tpcc_history_buf_reads;
+  ulint tpcc_wh_buf_rd;
+  ulint tpcc_dist_buf_rd;
+  ulint tpcc_cust_buf_rd;
+  ulint tpcc_stk_buf_rd;
+  ulint tpcc_itm_buf_rd;
+  ulint tpcc_orders_buf_rd;
+  ulint tpcc_new_orders_buf_rd;
+  ulint tpcc_order_line_buf_rd;
+  ulint tpcc_history_buf_rd;
 
-  ulint tpcc_total_reads;
   /**/
 
   ulint innodb_buffer_pool_read_requests;  /*!< buf_pool->stat.n_page_gets */

@@ -1541,27 +1541,27 @@ void srv_export_innodb_status(void) {
   mutex_enter(&srv_innodb_monitor_mutex);
 
   /*kyong*/
-  export_vars.tpcc_customer_disk_reads = srv_stats.tpcc_customer_disk_reads;
-  export_vars.tpcc_district_disk_reads = srv_stats.tpcc_district_disk_reads;
-  export_vars.tpcc_history_disk_reads = srv_stats.tpcc_history_disk_reads;
-  export_vars.tpcc_item_disk_reads = srv_stats.tpcc_item_disk_reads;
-  export_vars.tpcc_new_orders_disk_reads = srv_stats.tpcc_new_orders_disk_reads;
-  export_vars.tpcc_order_line_disk_reads = srv_stats.tpcc_order_line_disk_reads;
-  export_vars.tpcc_orders_disk_reads = srv_stats.tpcc_orders_disk_reads;
-  export_vars.tpcc_stock_disk_reads = srv_stats.tpcc_stock_disk_reads;
-  export_vars.tpcc_warehouse_disk_reads = srv_stats.tpcc_warehouse_disk_reads;
+  export_vars.tpcc_cust_disk_rd = srv_stats.tpcc_cust_disk_rd;
+  export_vars.tpcc_dist_disk_rd = srv_stats.tpcc_dist_disk_rd;
+  export_vars.tpcc_his_disk_rd = srv_stats.tpcc_his_disk_rd;
+  export_vars.tpcc_itm_disk_rd = srv_stats.tpcc_itm_disk_rd;
+  export_vars.tpcc_no_disk_rd = srv_stats.tpcc_no_disk_rd;
+  export_vars.tpcc_ol_disk_rd = srv_stats.tpcc_ol_disk_rd;
+  export_vars.tpcc_or_disk_rd = srv_stats.tpcc_or_disk_rd;
+  export_vars.tpcc_stk_disk_rd = srv_stats.tpcc_stk_disk_rd;
+  export_vars.tpcc_wh_disk_rd = srv_stats.tpcc_wh_disk_rd;
 
-  export_vars.tpcc_customer_buf_reads = srv_stats.tpcc_customer_buf_reads;
-  export_vars.tpcc_district_buf_reads = srv_stats.tpcc_district_buf_reads;
-  export_vars.tpcc_history_buf_reads = srv_stats.tpcc_history_buf_reads;
-  export_vars.tpcc_item_buf_reads = srv_stats.tpcc_item_buf_reads;
-  export_vars.tpcc_new_orders_buf_reads = srv_stats.tpcc_new_orders_buf_reads;
-  export_vars.tpcc_order_line_buf_reads = srv_stats.tpcc_order_line_buf_reads;
-  export_vars.tpcc_orders_buf_reads = srv_stats.tpcc_orders_buf_reads;
-  export_vars.tpcc_stock_buf_reads = srv_stats.tpcc_stock_buf_reads;
-  export_vars.tpcc_warehouse_buf_reads = srv_stats.tpcc_warehouse_buf_reads;
+  export_vars.tpcc_cust_buf_rd = srv_stats.tpcc_cust_buf_rd;
+  export_vars.tpcc_dist_buf_rd = srv_stats.tpcc_dist_buf_rd;
+  export_vars.tpcc_his_buf_rd = srv_stats.tpcc_his_buf_rd;
+  export_vars.tpcc_itm_buf_rd = srv_stats.tpcc_itm_buf_rd;
+  export_vars.tpcc_no_buf_rd = srv_stats.tpcc_no_buf_rd;
+  export_vars.tpcc_ol_buf_rd = srv_stats.tpcc_ol_buf_rd;
+  export_vars.tpcc_or_buf_rd = srv_stats.tpcc_or_buf_rd;
+  export_vars.tpcc_stk_buf_rd = srv_stats.tpcc_stk_buf_rd;
+  export_vars.tpcc_wh_buf_rd = srv_stats.tpcc_wh_buf_rd;
   
-  export_vars.tpcc_total_reads = srv_stats.tpcc_total_reads;
+  export_vars.tpcc_total_rd = srv_stats.tpcc_total_rd;
   /**/
 
   export_vars.innodb_data_pending_reads = os_n_pending_reads;
